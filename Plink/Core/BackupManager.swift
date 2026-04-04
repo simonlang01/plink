@@ -138,15 +138,14 @@ final class BackupManager {
             showAlert(title: NSLocalizedString("backup.error.title", comment: ""), message: NSLocalizedString("backup.import.error.decode", comment: "")); return
         }
 
-        // Delete all existing data and flush immediately so SwiftData
-        // doesn't hold pending deletes alongside pending inserts.
-        if let existingItems = try? context.fetch(FetchDescriptor<TodoItem>()) {
-            existingItems.forEach { context.delete($0) }
-        }
-        if let existingGroups = try? context.fetch(FetchDescriptor<TodoGroup>()) {
-            existingGroups.forEach { context.delete($0) }
-        }
-        do { try context.save() } catch {
+        // Use batch delete (context.delete(model:)) to avoid SwiftData
+        // "attribute fault not resolved" crashes that occur when fetching
+        // objects as faults and then deleting them individually.
+        do {
+            try context.delete(model: TodoItem.self)    // cascade-deletes TaskAttachments
+            try context.delete(model: TodoGroup.self)
+            try context.save()
+        } catch {
             showAlert(title: NSLocalizedString("backup.error.title", comment: ""), message: error.localizedDescription); return
         }
 
