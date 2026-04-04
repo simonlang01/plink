@@ -1,0 +1,172 @@
+
+<style>
+body{font-family:var(--font-sans)}
+.section{padding:1.5rem 1rem;display:flex;flex-direction:column;align-items:center;gap:24px}
+.row{display:flex;gap:24px;align-items:flex-end;justify-content:center;flex-wrap:wrap}
+.variant{display:flex;flex-direction:column;align-items:center;gap:8px}
+.label{font-size:11px;color:var(--color-text-tertiary)}
+.icon-wrap{border-radius:22.5%;overflow:hidden}
+.divider{width:100%;height:0.5px;background:var(--color-border-tertiary);margin:4px 0}
+.sizes-row{display:flex;gap:16px;align-items:flex-end;justify-content:center}
+</style>
+
+<div class="section">
+
+<div class="row">
+
+  <div class="variant">
+    <div class="icon-wrap" style="width:120px;height:120px">
+      <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <rect width="120" height="120" fill="#0A1F16"/>
+        <rect x="26" y="32" width="68" height="56" rx="9" fill="#0F3D28"/>
+        <rect x="26" y="32" width="68" height="56" rx="9" fill="none" stroke="#1D9E75" stroke-width="1.5"/>
+        <line x1="44" y1="50" x2="82" y2="50" stroke="#5DCAA5" stroke-width="2" stroke-linecap="round"/>
+        <line x1="44" y1="60" x2="76" y2="60" stroke="#5DCAA5" stroke-width="2" stroke-linecap="round" opacity="0.65"/>
+        <line x1="44" y1="70" x2="68" y2="70" stroke="#5DCAA5" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+        <circle cx="36" cy="50" r="4" fill="#1D9E75"/>
+        <circle cx="36" cy="60" r="4" fill="#1D9E75" opacity="0.5"/>
+        <circle cx="36" cy="70" r="4" fill="#1D9E75" opacity="0.25"/>
+        <circle cx="88" cy="34" r="14" fill="#0F6E56"/>
+        <circle cx="88" cy="34" r="14" fill="none" stroke="#1D9E75" stroke-width="1.5"/>
+        <path d="M82 34.5l4 4 7.5-8" stroke="#9FE1CB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="label">Dunkel</div>
+  </div>
+
+  <div class="variant">
+    <div class="icon-wrap" style="width:120px;height:120px">
+      <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <rect width="120" height="120" fill="#E1F5EE"/>
+        <rect x="26" y="32" width="68" height="56" rx="9" fill="white"/>
+        <rect x="26" y="32" width="68" height="56" rx="9" fill="none" stroke="#1D9E75" stroke-width="1.5"/>
+        <line x1="44" y1="50" x2="82" y2="50" stroke="#0F6E56" stroke-width="2" stroke-linecap="round"/>
+        <line x1="44" y1="60" x2="76" y2="60" stroke="#0F6E56" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+        <line x1="44" y1="70" x2="68" y2="70" stroke="#0F6E56" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+        <circle cx="36" cy="50" r="4" fill="#1D9E75"/>
+        <circle cx="36" cy="60" r="4" fill="#1D9E75" opacity="0.5"/>
+        <circle cx="36" cy="70" r="4" fill="#1D9E75" opacity="0.25"/>
+        <circle cx="88" cy="34" r="14" fill="#1D9E75"/>
+        <path d="M82 34.5l4 4 7.5-8" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="label">Hell</div>
+  </div>
+
+  <div class="variant">
+    <div class="icon-wrap" style="width:120px;height:120px">
+      <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <rect width="120" height="120" fill="#063D26"/>
+        <rect x="22" y="28" width="76" height="64" rx="10" fill="#0A5C38"/>
+        <rect x="22" y="28" width="76" height="64" rx="10" fill="none" stroke="#1D9E75" stroke-width="1"/>
+        <rect x="22" y="28" width="76" height="22" rx="10" fill="#0F6E56"/>
+        <rect x="22" y="39" width="76" height="11" fill="#0F6E56"/>
+        <text x="60" y="45" text-anchor="middle" font-size="10" font-weight="500" fill="#9FE1CB" font-family="system-ui,sans-serif">plink</text>
+        <line x1="40" y1="65" x2="84" y2="65" stroke="#5DCAA5" stroke-width="2" stroke-linecap="round"/>
+        <line x1="40" y1="74" x2="78" y2="74" stroke="#5DCAA5" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+        <line x1="40" y1="83" x2="70" y2="83" stroke="#5DCAA5" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+        <circle cx="32" cy="65" r="4" fill="#1D9E75"/>
+        <circle cx="32" cy="74" r="4" fill="#1D9E75" opacity="0.5"/>
+        <circle cx="32" cy="83" r="4" fill="#1D9E75" opacity="0.25"/>
+        <circle cx="86" cy="33" r="13" fill="#085041"/>
+        <circle cx="86" cy="33" r="13" fill="none" stroke="#1D9E75" stroke-width="1.5"/>
+        <path d="M80.5 33.5l3.5 3.5 7-7.5" stroke="#9FE1CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="label">Mit Titelleiste</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="sizes-row">
+  <div class="variant">
+    <div class="icon-wrap" style="width:96px;height:96px">
+      <svg width="96" height="96" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <rect width="120" height="120" fill="#0A1F16"/>
+        <rect x="26" y="32" width="68" height="56" rx="9" fill="#0F3D28"/>
+        <rect x="26" y="32" width="68" height="56" rx="9" fill="none" stroke="#1D9E75" stroke-width="1.5"/>
+        <line x1="44" y1="50" x2="82" y2="50" stroke="#5DCAA5" stroke-width="2" stroke-linecap="round"/>
+        <line x1="44" y1="60" x2="76" y2="60" stroke="#5DCAA5" stroke-width="2" stroke-linecap="round" opacity="0.65"/>
+        <line x1="44" y1="70" x2="68" y2="70" stroke="#5DCAA5" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+        <circle cx="36" cy="50" r="4" fill="#1D9E75"/>
+        <circle cx="36" cy="60" r="4" fill="#1D9E75" opacity="0.5"/>
+        <circle cx="36" cy="70" r="4" fill="#1D9E75" opacity="0.25"/>
+        <circle cx="88" cy="34" r="14" fill="#0F6E56"/>
+        <circle cx="88" cy="34" r="14" fill="none" stroke="#1D9E75" stroke-width="1.5"/>
+        <path d="M82 34.5l4 4 7.5-8" stroke="#9FE1CB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="label">96px</div>
+  </div>
+  <div class="variant">
+    <div class="icon-wrap" style="width:64px;height:64px">
+      <svg width="64" height="64" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <rect width="120" height="120" fill="#0A1F16"/>
+        <rect x="26" y="32" width="68" height="56" rx="9" fill="#0F3D28"/>
+        <rect x="26" y="32" width="68" height="56" rx="9" fill="none" stroke="#1D9E75" stroke-width="1.5"/>
+        <line x1="44" y1="50" x2="82" y2="50" stroke="#5DCAA5" stroke-width="2" stroke-linecap="round"/>
+        <line x1="44" y1="60" x2="76" y2="60" stroke="#5DCAA5" stroke-width="2" stroke-linecap="round" opacity="0.65"/>
+        <line x1="44" y1="70" x2="68" y2="70" stroke="#5DCAA5" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+        <circle cx="36" cy="50" r="4" fill="#1D9E75"/>
+        <circle cx="36" cy="60" r="4" fill="#1D9E75" opacity="0.5"/>
+        <circle cx="36" cy="70" r="4" fill="#1D9E75" opacity="0.25"/>
+        <circle cx="88" cy="34" r="14" fill="#0F6E56"/>
+        <circle cx="88" cy="34" r="14" fill="none" stroke="#1D9E75" stroke-width="1.5"/>
+        <path d="M82 34.5l4 4 7.5-8" stroke="#9FE1CB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="label">64px</div>
+  </div>
+  <div class="variant">
+    <div class="icon-wrap" style="width:48px;height:48px">
+      <svg width="48" height="48" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <rect width="120" height="120" fill="#0A1F16"/>
+        <rect x="26" y="32" width="68" height="56" rx="9" fill="#0F3D28"/>
+        <rect x="26" y="32" width="68" height="56" rx="9" fill="none" stroke="#1D9E75" stroke-width="2"/>
+        <line x1="44" y1="50" x2="82" y2="50" stroke="#5DCAA5" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="44" y1="60" x2="76" y2="60" stroke="#5DCAA5" stroke-width="2.5" stroke-linecap="round" opacity="0.65"/>
+        <line x1="44" y1="70" x2="68" y2="70" stroke="#5DCAA5" stroke-width="2.5" stroke-linecap="round" opacity="0.35"/>
+        <circle cx="36" cy="50" r="4.5" fill="#1D9E75"/>
+        <circle cx="36" cy="60" r="4.5" fill="#1D9E75" opacity="0.5"/>
+        <circle cx="36" cy="70" r="4.5" fill="#1D9E75" opacity="0.25"/>
+        <circle cx="88" cy="34" r="14" fill="#0F6E56"/>
+        <path d="M82 34.5l4 4 7.5-8" stroke="#9FE1CB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="label">48px</div>
+  </div>
+  <div class="variant">
+    <div class="icon-wrap" style="width:32px;height:32px">
+      <svg width="32" height="32" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <rect width="120" height="120" fill="#0A1F16"/>
+        <rect x="26" y="32" width="68" height="56" rx="9" fill="#0F3D28"/>
+        <rect x="26" y="32" width="68" height="56" rx="9" fill="none" stroke="#1D9E75" stroke-width="2"/>
+        <line x1="44" y1="50" x2="82" y2="50" stroke="#5DCAA5" stroke-width="3" stroke-linecap="round"/>
+        <line x1="44" y1="62" x2="74" y2="62" stroke="#5DCAA5" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+        <line x1="44" y1="74" x2="66" y2="74" stroke="#5DCAA5" stroke-width="3" stroke-linecap="round" opacity="0.3"/>
+        <circle cx="36" cy="50" r="5" fill="#1D9E75"/>
+        <circle cx="88" cy="34" r="14" fill="#0F6E56"/>
+        <path d="M82 34.5l4 4 7.5-8" stroke="#9FE1CB" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="label">32px</div>
+  </div>
+  <div class="variant">
+    <div class="icon-wrap" style="width:20px;height:20px;border-radius:4px">
+      <svg width="20" height="20" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <rect width="120" height="120" fill="#0A1F16"/>
+        <rect x="26" y="32" width="68" height="56" rx="9" fill="#0F3D28"/>
+        <line x1="44" y1="50" x2="82" y2="50" stroke="#5DCAA5" stroke-width="5" stroke-linecap="round"/>
+        <line x1="44" y1="64" x2="74" y2="64" stroke="#5DCAA5" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+        <line x1="44" y1="78" x2="66" y2="78" stroke="#5DCAA5" stroke-width="5" stroke-linecap="round" opacity="0.3"/>
+        <circle cx="88" cy="34" r="16" fill="#0F6E56"/>
+        <path d="M81 34l4 5 8-9" stroke="#9FE1CB" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="label">20px</div>
+  </div>
+</div>
+
+</div>

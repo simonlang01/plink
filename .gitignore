@@ -4,3 +4,4 @@ dist/*.dmg
 xcuserdata/
 .DS_Store
 DerivedData/
+.claude/
