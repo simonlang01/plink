@@ -6,6 +6,17 @@ A minimalist, ultra-fast macOS ToDo app focused on quick capture via a global ke
 
 ---
 
+## Installation
+
+1. Go to the [Releases](https://github.com/simonlang01/plink/releases/latest) page
+2. Download the `.dmg` file
+3. Open the DMG and drag **Plink** into your **Applications** folder
+4. Launch Plink from Applications or Spotlight
+
+**Requirements:** macOS 14 or later
+
+---
+
 ## Features
 
 - Global shortcut to instantly capture tasks (default: `N + Space`)
