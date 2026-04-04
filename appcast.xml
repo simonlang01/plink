@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+    <channel>
+        <title>Plink</title>
+        <link>https://raw.githubusercontent.com/simonlang01/plink/main/appcast.xml</link>
+        <description>Plink update feed</description>
+        <language>en</language>
+
+        <item>
+            <title>Plink 1.5</title>
+            <pubDate>Fri, 04 Apr 2025 00:00:00 +0000</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>1.5</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:releaseNotesLink>https://github.com/simonlang01/plink/releases/tag/v1.5</sparkle:releaseNotesLink>
+            <enclosure
+                url="https://github.com/simonlang01/plink/releases/download/v1.5/Plink-1.5.dmg"
+                length="2431652"
+                type="application/octet-stream"
+                sparkle:edSignature="ScqdgW2S/v58jdrDYtCxvVjaXG32FvNJrJzawC19H1m5IOfYmDMKBz2HtyFTKheYebsUfbnGuzcQi1GwlVj6Aw=="
+            />
+        </item>
+
+    </channel>
+</rss>
