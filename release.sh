@@ -25,6 +25,12 @@ DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcodebuild \
   CODE_SIGN_IDENTITY="-" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO \
   build | grep -E "error:|BUILD"
 
+BUILT_VERSION=$(defaults read "$APP/Contents/Info.plist" CFBundleShortVersionString 2>/dev/null)
+if [ "$BUILT_VERSION" != "$VERSION" ]; then
+    echo "✗ Version mismatch: built app is $BUILT_VERSION, expected $VERSION. Aborting."
+    exit 1
+fi
+
 echo "→ Creating DMG..."
 rm -f "$DMG"
 create-dmg \
