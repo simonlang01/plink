@@ -9,7 +9,7 @@
         <item>
             <title>Plink 1.5.1</title>
             <pubDate>Sat, 04 Apr 2026 01:25:39 +0000</pubDate>
-            <sparkle:version>1</sparkle:version>
+            <sparkle:version>2</sparkle:version>
             <sparkle:shortVersionString>1.5.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:releaseNotesLink>https://github.com/simonlang01/plink/releases/tag/v1.5.1</sparkle:releaseNotesLink>

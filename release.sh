@@ -4,15 +4,17 @@
 
 set -e
 
-VERSION=${1:?"Usage: ./release.sh <version>  (e.g. ./release.sh 1.6)"}
+VERSION=${1:?"Usage: ./release.sh <version> <build>  (e.g. ./release.sh 1.6 2)"}
+BUILD=${2:?"Usage: ./release.sh <version> <build>  (e.g. ./release.sh 1.6 2)"}
 REPO_ROOT="$(cd "$(dirname "$0")" && pwd)"
 DERIVED_DATA=~/Library/Developer/Xcode/DerivedData/Plink-dbykklctfnorzibkynxpvuyluoxw
 SIGN_UPDATE="$REPO_ROOT/build/SourcePackages/artifacts/sparkle/Sparkle/bin/sign_update"
 DMG="$REPO_ROOT/dist/Plink-$VERSION.dmg"
 APP="$DERIVED_DATA/Build/Products/Release/Plink.app"
 
-echo "→ Updating version to $VERSION..."
+echo "→ Updating version to $VERSION (build $BUILD)..."
 /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $VERSION" "$REPO_ROOT/Plink/Info.plist"
+/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $BUILD" "$REPO_ROOT/Plink/Info.plist"
 
 echo "→ Building Release..."
 DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcodebuild \
@@ -53,7 +55,7 @@ cat > "$REPO_ROOT/dist/appcast.xml" << EOF
         <item>
             <title>Plink $VERSION</title>
             <pubDate>$DATE</pubDate>
-            <sparkle:version>1</sparkle:version>
+            <sparkle:version>$BUILD</sparkle:version>
             <sparkle:shortVersionString>$VERSION</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:releaseNotesLink>https://github.com/simonlang01/plink/releases/tag/v$VERSION</sparkle:releaseNotesLink>
