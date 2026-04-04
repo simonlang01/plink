@@ -7,7 +7,7 @@ set -e
 VERSION=${1:?"Usage: ./release.sh <version> <build>  (e.g. ./release.sh 1.6 2)"}
 BUILD=${2:?"Usage: ./release.sh <version> <build>  (e.g. ./release.sh 1.6 2)"}
 REPO_ROOT="$(cd "$(dirname "$0")" && pwd)"
-DERIVED_DATA=~/Library/Developer/Xcode/DerivedData/Plink-dbykklctfnorzibkynxpvuyluoxw
+DERIVED_DATA="$REPO_ROOT/build/DerivedData"
 SIGN_UPDATE="$REPO_ROOT/build/SourcePackages/artifacts/sparkle/Sparkle/bin/sign_update"
 DMG="$REPO_ROOT/dist/Plink-$VERSION.dmg"
 APP="$DERIVED_DATA/Build/Products/Release/Plink.app"
@@ -58,7 +58,7 @@ APPCAST_CONTENT=$(cat << EOF
             <sparkle:version>$BUILD</sparkle:version>
             <sparkle:shortVersionString>$VERSION</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <sparkle:releaseNotesLink>https://github.com/simonlang01/plink/releases/tag/v$VERSION</sparkle:releaseNotesLink>
+            <sparkle:releaseNotes>Bug fixes and stability improvements.</sparkle:releaseNotes>
             <enclosure
                 url="https://github.com/simonlang01/plink/releases/download/v$VERSION/Plink-$VERSION.dmg"
                 length="$LENGTH"
