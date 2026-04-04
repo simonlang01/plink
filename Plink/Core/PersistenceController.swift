@@ -1,4 +1,5 @@
 import Foundation
+import AppKit
 import SwiftData
 
 @MainActor
@@ -27,7 +28,14 @@ final class PersistenceController {
         do {
             container = try ModelContainer(for: schema, configurations: [config])
         } catch {
-            fatalError("Failed to initialize SwiftData container: \(error)")
+            let alert = NSAlert()
+            alert.messageText = NSLocalizedString("error.db.title", comment: "")
+            alert.informativeText = NSLocalizedString("error.db.message", comment: "") + "\n\n\(error.localizedDescription)"
+            alert.alertStyle = .critical
+            alert.addButton(withTitle: NSLocalizedString("button.quit", comment: ""))
+            alert.runModal()
+            NSApplication.shared.terminate(nil)
+            fatalError("Unreachable")
         }
         purgeExpiredItems()
     }
@@ -41,7 +49,11 @@ final class PersistenceController {
             let refDate = item.deletedAt ?? item.completedAt ?? item.createdAt
             if refDate < cutoff { ctx.delete(item) }
         }
-        try? ctx.save()
+        do {
+            try ctx.save()
+        } catch {
+            print("[Plink] Failed to purge expired items: \(error)")
+        }
     }
 
     /// In-memory container for previews / tests

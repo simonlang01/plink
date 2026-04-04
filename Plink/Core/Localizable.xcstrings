@@ -2,6 +2,27 @@
   "sourceLanguage" : "en",
   "strings" : {
 
+    "error.db.title" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Could not open your data" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Daten konnten nicht geöffnet werden" } }
+      }
+    },
+
+    "error.db.message" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Plink could not load your task database. Try restarting the app. If the problem persists, contact support." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Plink konnte die Aufgabendatenbank nicht laden. Starte die App neu. Wenn das Problem anhält, wende dich an den Support." } }
+      }
+    },
+
+    "button.quit" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Quit" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Beenden" } }
+      }
+    },
+
     "app.name" : {
       "localizations" : {
         "en" : { "stringUnit" : { "state" : "translated", "value" : "Plink" } },

@@ -18,10 +18,14 @@ final class QuickAddPanelController {
     private var panel: NSPanel?
     private var container: ModelContainer?
     private weak var appState: AppState?
+    private var mouseMonitor: Any?
+    private var isSetUp = false
 
     private init() {}
 
     func setup(container: ModelContainer, appState: AppState) {
+        guard !isSetUp else { return }
+        isSetUp = true
         self.container = container
         self.appState = appState
         KeyboardShortcuts.onKeyUp(for: .quickAdd) { [weak self] in
@@ -98,7 +102,7 @@ final class QuickAddPanelController {
         self.panel = panel
 
         // Global click-outside monitor
-        NSEvent.addGlobalMonitorForEvents(matching: [.leftMouseDown, .rightMouseDown]) { [weak self] _ in
+        mouseMonitor = NSEvent.addGlobalMonitorForEvents(matching: [.leftMouseDown, .rightMouseDown]) { [weak self] _ in
             Task { @MainActor in self?.dismiss() }
         }
     }
@@ -108,5 +112,9 @@ final class QuickAddPanelController {
     func dismiss() {
         panel?.orderOut(nil)
         panel = nil
+        if let monitor = mouseMonitor {
+            NSEvent.removeMonitor(monitor)
+            mouseMonitor = nil
+        }
     }
 }
