@@ -1,5 +1,5 @@
 ## 1. Core Vision\
-A minimalist, ultra-modern macOS ToDo app ("Plink") focused on speed and "Quick-Capture" via global shortcuts.\
+A minimalist, ultra-modern macOS ToDo app ("Klen") focused on speed and "Quick-Capture" via global shortcuts.\
 \
 ## 2. Requirements (The 19 Pillars)\
 1. **UI:** Modern, simple, Apple-style (Light/Dark).\

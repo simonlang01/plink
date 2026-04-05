@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    color: #1d1d1f;
+    padding: 16px 20px;
+    margin: 0;
+    background: transparent;
+  }
+  h2 { font-size: 15px; font-weight: 700; margin: 0 0 4px 0; color: #000; }
+  .version { font-size: 11px; color: #6e6e73; margin: 0 0 14px 0; }
+  .badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 1px 7px;
+    border-radius: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  .new  { background: #e8f5e9; color: #2e7d32; }
+  .fix  { background: #fff3e0; color: #e65100; }
+  .improved { background: #e3f2fd; color: #1565c0; }
+  ul { margin: 0; padding: 0 0 0 16px; }
+  li { margin-bottom: 6px; line-height: 1.5; }
+  .section { margin-bottom: 16px; }
+  .section-title { font-size: 11px; font-weight: 600; color: #6e6e73; text-transform: uppercase; letter-spacing: 0.04em; margin: 0 0 8px 0; }
+  hr { border: none; border-top: 1px solid #e5e5e7; margin: 16px 0; }
+</style>
+</head>
+<body>
+
+<h2>Klen 3.0</h2>
+<p class="version">April 2026 · Build 16</p>
+
+<div class="section">
+  <p class="section-title">✦ A new name. The same obsession with simplicity.</p>
+  <p style="color:#3c3c43; margin:0 0 14px 0; line-height:1.6;">
+    Plink is now <strong>Klen</strong> — <em>[klɛn]</em>. Inspired by Scandinavian precision, the name reflects what this app has always been: the leanest way to capture tasks in the heat of the moment. No clutter, no friction. Just the essence of what needs to be done.
+  </p>
+</div>
+
+<div class="section">
+  <p class="section-title">What's new</p>
+  <ul>
+    <li><span class="badge new">New</span> <strong>New name & identity</strong> — Plink is now Klen. New icon, new name, same speed.</li>
+    <li><span class="badge new">New</span> <strong>Brand-new app icon</strong> — A clean, modern icon that reflects Klen's minimal character.</li>
+    <li><span class="badge new">New</span> <strong>About section in Settings</strong> — Name, pronunciation [klɛn], slogan, description, and version number — all in the Advanced tab.</li>
+    <li><span class="badge new">New</span> <strong>Reset Onboarding</strong> — Revisit the intro from Settings → Advanced anytime.</li>
+    <li><span class="badge new">New</span> <strong>Unit test suite</strong> — 60+ tests covering parser logic, dashboard sections, recurrence, data model edge cases, and purge behavior.</li>
+  </ul>
+</div>
+
+<div class="section">
+  <p class="section-title">Improved</p>
+  <ul>
+    <li><span class="badge improved">Improved</span> <strong>App icon in Onboarding</strong> — The welcome screen now shows the real app icon instead of a generic symbol.</li>
+    <li><span class="badge improved">Improved</span> <strong>Bundle ID & data paths</strong> — Updated to <code>com.simonlang.Klen</code>. Data stored under <em>Klen/</em> in Application Support.</li>
+    <li><span class="badge improved">Improved</span> <strong>All visible strings updated</strong> — Every user-facing mention of "Plink" replaced with "Klen" across English and German.</li>
+    <li><span class="badge improved">Improved</span> <strong>Backup files</strong> — Now saved as <code>.klenbackup</code> instead of <code>.plinkbackup</code>.</li>
+    <li><span class="badge improved">Improved</span> <strong>Sparkle update feed</strong> — Points to the new <code>klen</code> repository.</li>
+  </ul>
+</div>
+
+<div class="section">
+  <p class="section-title">Bug fixes</p>
+  <ul>
+    <li><span class="badge fix">Fix</span> <strong>Token parser edge case</strong> — Input starting with a token symbol (e.g. <code>@today Buy milk</code>) now documented as known limitation; title correctly empty rather than silently swallowing text.</li>
+    <li><span class="badge fix">Fix</span> <strong>Purge safety</strong> — Tasks soft-deleted without <code>deletedAt</code> set no longer risk being purged on next launch based on stale <code>createdAt</code> date.</li>
+    <li><span class="badge fix">Fix</span> <strong>Recurrence edge case</strong> — Monthly recurrence from Jan 31 no longer crashes; Swift Calendar handles the date gracefully.</li>
+    <li><span class="badge fix">Fix</span> <strong>Completed task visibility</strong> — Searching for a completed task correctly bypasses the 30-minute visibility window.</li>
+  </ul>
+</div>
+
+<hr>
+
+<p style="color:#6e6e73; font-size:11px; margin:0;">
+  <em>Noted in a blink. Organized in Klen.</em>
+</p>
+
+</body>
+</html>

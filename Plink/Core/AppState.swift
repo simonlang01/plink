@@ -1,7 +1,7 @@
 import SwiftUI
 
 extension Notification.Name {
-    static let plinkLanguageChanged = Notification.Name("plinkLanguageChanged")
+    static let plinkLanguageChanged = Notification.Name("klenLanguageChanged")
 }
 
 enum AppearanceMode: String, CaseIterable {

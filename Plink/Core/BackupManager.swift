@@ -97,8 +97,8 @@ final class BackupManager {
         // Save panel
         let panel = NSSavePanel()
         panel.title = NSLocalizedString("backup.export.panel.title", comment: "")
-        panel.nameFieldStringValue = "Plink-Backup-\(Self.dateStamp()).plinkbackup"
-        panel.allowedContentTypes = [.init(exportedAs: "com.plink.backup", conformingTo: .json)]
+        panel.nameFieldStringValue = "Klen-Backup-\(Self.dateStamp()).klenbackup"
+        panel.allowedContentTypes = [.init(exportedAs: "com.klen.backup", conformingTo: .json)]
         panel.canCreateDirectories = true
 
         guard panel.runModal() == .OK, let dest = panel.url else { return }
@@ -118,7 +118,7 @@ final class BackupManager {
     func `import`(context: ModelContext) async {
         let panel = NSOpenPanel()
         panel.title = NSLocalizedString("backup.import.panel.title", comment: "")
-        panel.allowedContentTypes = [.init(exportedAs: "com.plink.backup", conformingTo: .json)]
+        panel.allowedContentTypes = [.init(exportedAs: "com.klen.backup", conformingTo: .json)]
         panel.allowsMultipleSelection = false
         panel.canChooseDirectories = false
 

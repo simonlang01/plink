@@ -495,9 +495,46 @@ private struct AdvancedTab: View {
     @State private var isBusy = false
     @Environment(\.appAccent) private var accent
 
+    private var version: String {
+        Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "—"
+    }
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
+
+                // About section
+                HStack(spacing: 14) {
+                    Image(nsImage: NSApp.applicationIconImage)
+                        .resizable()
+                        .frame(width: 48, height: 48)
+                    VStack(alignment: .leading, spacing: 3) {
+                        HStack(spacing: 6) {
+                            Text("Klen")
+                                .scaledFont(size: 15, weight: .bold)
+                            Text("[klɛn]")
+                                .scaledFont(size: 11)
+                                .foregroundStyle(.secondary)
+                        }
+                        Text("Version \(version)")
+                            .scaledFont(size: 11)
+                            .foregroundStyle(.tertiary)
+                        Text("Noted in a blink. Organized in Klen.")
+                            .scaledFont(size: 11, weight: .medium)
+                            .foregroundStyle(accent)
+                            .italic()
+                    }
+                }
+                .padding(.horizontal, 20)
+                .padding(.top, 20)
+
+                Text("Inspired by Scandinavian precision, Klen is the leanest way to capture tasks in the heat of the moment.")
+                    .scaledFont(size: 11)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.horizontal, 20)
+
+                Divider().padding(.horizontal, 20)
 
                 // Backup section
                 VStack(alignment: .leading, spacing: 10) {
@@ -544,6 +581,32 @@ private struct AdvancedTab: View {
                 .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(accent.opacity(0.12), lineWidth: 1))
                 .padding(.horizontal, 20)
                 .padding(.top, 20)
+
+                // Onboarding section
+                VStack(alignment: .leading, spacing: 10) {
+                    HStack(spacing: 8) {
+                        Image(systemName: "sparkles")
+                            .scaledFont(size: 16)
+                            .foregroundStyle(accent)
+                        Text(LocalizedStringKey("settings.onboarding.title"))
+                            .scaledFont(size: 15, weight: .semibold)
+                    }
+                    Text(LocalizedStringKey("settings.onboarding.desc"))
+                        .scaledFont(size: 12)
+                        .foregroundStyle(.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Button {
+                        let flag = PersistenceController.dataDirectory.appendingPathComponent(".onboarding_complete")
+                        try? FileManager.default.removeItem(at: flag)
+                        restartApp()
+                    } label: {
+                        Label(LocalizedStringKey("settings.onboarding.button"), systemImage: "arrow.counterclockwise")
+                            .scaledFont(size: 12)
+                    }
+                    .buttonStyle(.bordered)
+                    .controlSize(.small)
+                }
+                .padding(.horizontal, 20)
 
                 // Reset section
                 VStack(alignment: .leading, spacing: 10) {
@@ -606,6 +669,66 @@ private struct AdvancedTab: View {
     private func resetAll() {
         allItems.forEach  { ctx.delete($0) }
         allGroups.forEach { ctx.delete($0) }
+    }
+}
+
+// MARK: – About Tab
+
+private struct AboutTab: View {
+    @Environment(\.appAccent) private var accent
+
+    private var version: String {
+        Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "—"
+    }
+
+    var body: some View {
+        ScrollView {
+            VStack(spacing: 24) {
+
+                // App identity
+                VStack(spacing: 8) {
+                    Image(nsImage: NSApp.applicationIconImage)
+                        .resizable()
+                        .frame(width: 72, height: 72)
+                    VStack(spacing: 4) {
+                        HStack(spacing: 8) {
+                            Text("Klen")
+                                .scaledFont(size: 22, weight: .bold)
+                            Text("[klɛn]")
+                                .scaledFont(size: 13)
+                                .foregroundStyle(.secondary)
+                        }
+                        Text("Version \(version)")
+                            .scaledFont(size: 12)
+                            .foregroundStyle(.tertiary)
+                    }
+                    Text("Noted in a blink. Organized in Klen.")
+                        .scaledFont(size: 12, weight: .medium)
+                        .foregroundStyle(accent)
+                        .italic()
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.top, 24)
+
+                Divider().padding(.horizontal, 20)
+
+                // Description
+                Text("Inspired by Scandinavian precision, Klen is the leanest way to capture tasks in the heat of the moment.")
+                    .scaledFont(size: 12)
+                    .foregroundStyle(.secondary)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.horizontal, 32)
+
+                Spacer(minLength: 16)
+
+                Text("© \(Calendar.current.component(.year, from: Date())) Simon Lang. All rights reserved.")
+                    .scaledFont(size: 10)
+                    .foregroundStyle(.tertiary)
+                    .padding(.bottom, 20)
+            }
+        }
+        .frame(minHeight: 280)
     }
 }
 

@@ -8,13 +8,13 @@ final class PersistenceController {
 
     let container: ModelContainer
 
-    /// ~/Library/Application Support/Plink  (or Plink-Dev in debug)
+    /// ~/Library/Application Support/Klen  (or Klen-Dev in debug)
     /// Survives app updates. Deleted by the uninstall script.
     static var dataDirectory: URL {
         #if DEBUG
-        let folder = "Plink-Dev"
+        let folder = "Klen-Dev"
         #else
-        let folder = "Plink"
+        let folder = "Klen"
         #endif
         let url = URL.applicationSupportDirectory.appending(path: folder, directoryHint: .isDirectory)
         try? FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)
@@ -52,7 +52,7 @@ final class PersistenceController {
         do {
             try ctx.save()
         } catch {
-            print("[Plink] Failed to purge expired items: \(error)")
+            print("[Klen] Failed to purge expired items: \(error)")
         }
     }
 

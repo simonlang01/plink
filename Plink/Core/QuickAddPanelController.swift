@@ -46,7 +46,7 @@ final class QuickAddPanelController {
 
     // MARK: – Show
 
-    private static let autosaveName = "PlinkQuickAddPanel"
+    private static let autosaveName = "KlenQuickAddPanel"
 
     private func show() {
         guard let container else { return }

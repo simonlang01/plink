@@ -20,9 +20,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.3.1</string>
+	<string>3.0</string>
 	<key>CFBundleVersion</key>
-	<string>15</string>
+	<string>16</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>14.0</string>
 	<key>LSUIElement</key>
@@ -36,7 +36,7 @@
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedURL</key>
-	<string>https://raw.githubusercontent.com/simonlang01/plink/main/appcast.xml</string>
+	<string>https://raw.githubusercontent.com/simonlang01/klen/main/appcast.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>FUhiO+jmQ1A3pY2HDwAYN3jIZkGd2rjnso5PkB2nRRM=</string>
 </dict>

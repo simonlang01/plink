@@ -87,6 +87,7 @@ struct DashboardView: View {
             KeyboardShortcuts.onKeyUp(for: .focusMode) { toggleFocus() }
         }
         .onChange(of: allItems) { _, _ in updateDockBadge() }
+        .task(id: allItems.count) { updateDockBadge() }
         .onChange(of: todayClear) { wasClear, isClear in
             if !wasClear && isClear && didCompleteTask {
                 showCelebration = true
@@ -295,11 +296,8 @@ struct DashboardView: View {
             !$0.isCompleted && !$0.isDeleted &&
             ($0.dueDate.map { $0 < endOfToday } ?? false)
         }.count
-        if count > 0 {
-            NSApp.dockTile.badgeLabel = "\(count)"
-        } else {
-            NSApp.dockTile.badgeLabel = ""
-        }
+        let label = count > 0 ? "\(count)" : ""
+        DispatchQueue.main.async { NSApp.dockTile.badgeLabel = label }
     }
 
     private func openHelpWindow() {

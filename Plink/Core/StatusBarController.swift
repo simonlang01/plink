@@ -105,7 +105,7 @@ final class StatusBarController {
     private func showContextMenu() {
         let menu = NSMenu()
 
-        let openItem = NSMenuItem(title: "Open Plink", action: #selector(openApp), keyEquivalent: "")
+        let openItem = NSMenuItem(title: "Open Klen", action: #selector(openApp), keyEquivalent: "")
         openItem.target = self
         menu.addItem(openItem)
 
@@ -117,7 +117,7 @@ final class StatusBarController {
 
         menu.addItem(.separator())
 
-        let quitItem = NSMenuItem(title: "Quit Plink", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
+        let quitItem = NSMenuItem(title: "Quit Klen", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
         quitItem.keyEquivalentModifierMask = .command
         menu.addItem(quitItem)
 

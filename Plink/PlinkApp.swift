@@ -3,7 +3,7 @@ import SwiftData
 import Sparkle
 
 @main
-struct PlinkApp: App {
+struct KlenApp: App {
     @StateObject private var appState = AppState()
     // Sparkle updater — only active in Release builds
     #if !DEBUG

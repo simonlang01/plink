@@ -130,14 +130,22 @@ struct OnboardingView: View {
     @ViewBuilder
     private func stepContent(for step: OnboardingStep) -> some View {
         VStack(spacing: 0) {
-            // Icon
-            ZStack {
-                Circle()
-                    .fill(step.iconColor.opacity(0.12))
-                    .frame(width: 88, height: 88)
-                Image(systemName: step.icon)
-                    .scaledFont(size: 38, weight: .medium)
-                    .foregroundStyle(step.iconColor)
+            // Icon — app icon on first step, SF symbol on rest
+            Group {
+                if currentStep == 0 {
+                    Image(nsImage: NSApp.applicationIconImage)
+                        .resizable()
+                        .frame(width: 88, height: 88)
+                } else {
+                    ZStack {
+                        Circle()
+                            .fill(step.iconColor.opacity(0.12))
+                            .frame(width: 88, height: 88)
+                        Image(systemName: step.icon)
+                            .scaledFont(size: 38, weight: .medium)
+                            .foregroundStyle(step.iconColor)
+                    }
+                }
             }
             .padding(.bottom, 28)
 

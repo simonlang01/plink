@@ -28,7 +28,7 @@ struct MenuBarPopoverView: View {
         VStack(spacing: 0) {
             // Header
             HStack {
-                Text("Plink")
+                Text("Klen")
                     .scaledFont(size: 13, weight: .semibold)
                 Spacer()
                 if !visibleTasks.isEmpty {
@@ -45,7 +45,7 @@ struct MenuBarPopoverView: View {
                         .foregroundStyle(.secondary)
                 }
                 .buttonStyle(.plain)
-                .help(NSLocalizedString("menubar.openPlink", comment: ""))
+                .help(NSLocalizedString("menubar.openKlen", comment: ""))
             }
             .padding(.horizontal, 14)
             .padding(.top, 12)
@@ -102,7 +102,7 @@ struct MenuBarPopoverView: View {
             // Footer
             Button(action: onOpenApp) {
                 HStack {
-                    Text(LocalizedStringKey("menubar.openPlink"))
+                    Text(LocalizedStringKey("menubar.openKlen"))
                         .scaledFont(size: 12)
                         .foregroundStyle(.secondary)
                     Spacer()

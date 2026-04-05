@@ -9,8 +9,8 @@ BUILD=${2:?"Usage: ./release.sh <version> <build>  (e.g. ./release.sh 1.6 2)"}
 REPO_ROOT="$(cd "$(dirname "$0")" && pwd)"
 DERIVED_DATA="$REPO_ROOT/build/DerivedData"
 SIGN_UPDATE="$REPO_ROOT/build/SourcePackages/artifacts/sparkle/Sparkle/bin/sign_update"
-DMG="$REPO_ROOT/dist/Plink-$VERSION.dmg"
-APP="$DERIVED_DATA/Build/Products/Release/Plink.app"
+DMG="$REPO_ROOT/dist/Klen-$VERSION.dmg"
+APP="$DERIVED_DATA/Build/Products/Release/Klen.app"
 
 echo "→ Updating version to $VERSION (build $BUILD)..."
 /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $VERSION" "$REPO_ROOT/Plink/Info.plist"
@@ -19,7 +19,7 @@ echo "→ Updating version to $VERSION (build $BUILD)..."
 echo "→ Building Release..."
 DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcodebuild \
   -project "$REPO_ROOT/Plink.xcodeproj" \
-  -scheme Plink -configuration Release \
+  -scheme Klen -configuration Release \
   -derivedDataPath "$DERIVED_DATA" \
   -clonedSourcePackagesDirPath "$REPO_ROOT/build/SourcePackages" \
   CODE_SIGN_IDENTITY="-" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO \
@@ -34,11 +34,11 @@ fi
 echo "→ Creating DMG..."
 rm -f "$DMG"
 create-dmg \
-  --volname "Plink" \
+  --volname "Klen" \
   --volicon "$APP/Contents/Resources/AppIcon.icns" \
   --window-pos 200 120 --window-size 660 400 \
-  --icon-size 128 --icon "Plink.app" 165 185 \
-  --hide-extension "Plink.app" --app-drop-link 495 185 \
+  --icon-size 128 --icon "Klen.app" 165 185 \
+  --hide-extension "Klen.app" --app-drop-link 495 185 \
   --no-internet-enable \
   "$DMG" "$APP"
 
@@ -53,20 +53,20 @@ APPCAST_CONTENT=$(cat << EOF
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
     <channel>
-        <title>Plink</title>
-        <link>https://raw.githubusercontent.com/simonlang01/plink/main/appcast.xml</link>
-        <description>Plink update feed</description>
+        <title>Klen</title>
+        <link>https://raw.githubusercontent.com/simonlang01/klen/main/appcast.xml</link>
+        <description>Klen update feed</description>
         <language>en</language>
 
         <item>
-            <title>Plink $VERSION</title>
+            <title>Klen $VERSION</title>
             <pubDate>$DATE</pubDate>
             <sparkle:version>$BUILD</sparkle:version>
             <sparkle:shortVersionString>$VERSION</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:releaseNotes>Bug fixes and stability improvements.</sparkle:releaseNotes>
             <enclosure
-                url="https://github.com/simonlang01/plink/releases/download/v$VERSION/Plink-$VERSION.dmg"
+                url="https://github.com/simonlang01/klen/releases/download/v$VERSION/Klen-$VERSION.dmg"
                 length="$LENGTH"
                 type="application/octet-stream"
                 sparkle:edSignature="$ED_SIG"

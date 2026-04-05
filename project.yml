@@ -1,4 +1,4 @@
-name: Plink
+name: Klen
 options:
   bundleIdPrefix: com.simonlang
   deploymentTarget:
@@ -24,12 +24,12 @@ settings:
     INFOPLIST_KEY_LSApplicationCategoryType: "public.app-category.productivity"
   configs:
     Debug:
-      PRODUCT_BUNDLE_IDENTIFIER: com.simonlang.Plink.dev
+      PRODUCT_BUNDLE_IDENTIFIER: com.simonlang.Klen.dev
       SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
-      APP_DISPLAY_NAME: Plink Dev
+      APP_DISPLAY_NAME: Klen Dev
     Release:
-      PRODUCT_BUNDLE_IDENTIFIER: com.simonlang.Plink
-      APP_DISPLAY_NAME: Plink
+      PRODUCT_BUNDLE_IDENTIFIER: com.simonlang.Klen
+      APP_DISPLAY_NAME: Klen
 
 packages:
   KeyboardShortcuts:
@@ -40,7 +40,7 @@ packages:
     from: "2.6.0"
 
 targets:
-  Plink:
+  Klen:
     type: application
     platform: macOS
     sources:
@@ -66,10 +66,10 @@ targets:
       testTargets: []
 
 schemes:
-  Plink:
+  Klen:
     build:
       targets:
-        Plink: all
+        Klen: all
     run:
       config: Debug
     archive:

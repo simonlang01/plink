@@ -5,10 +5,10 @@ import AppKit
 // MARK: – Action identifiers
 
 private enum NotifAction {
-    static let done       = "PLINK_DONE"
-    static let snooze     = "PLINK_SNOOZE"
-    static let reschedule = "PLINK_RESCHEDULE"
-    static let category   = "PLINK_TASK"
+    static let done       = "KLEN_DONE"
+    static let snooze     = "KLEN_SNOOZE"
+    static let reschedule = "KLEN_RESCHEDULE"
+    static let category   = "KLEN_TASK"
 }
 
 // MARK: – Mute durations
@@ -162,7 +162,7 @@ final class NotificationManager: NSObject, ObservableObject {
             do {
                 try await UNUserNotificationCenter.current().add(request)
             } catch {
-                print("[Plink] Notification scheduling failed: \(error)")
+                print("[Klen] Notification scheduling failed: \(error)")
             }
         }
     }

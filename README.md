@@ -1,17 +1,19 @@
-# Plink
+# Klen
 
-A minimalist, ultra-fast macOS ToDo app focused on quick capture via a global keyboard shortcut.
+*Noted in a blink. Organized in Klen.*
 
-**Current version:** 1.5.1 · macOS 14+
+Business is complex enough. Your tools shouldn't be. Inspired by Scandinavian precision, Klen is the leanest way to capture tasks in the heat of the moment. No clutter, no friction. Just the essence of what needs to be done. Capture in a blink, execute with Klen.
+
+**Current version:** 2.3.1 · macOS 14+
 
 ---
 
 ## Installation
 
-1. Go to the [Releases](https://github.com/simonlang01/plink/releases/latest) page
+1. Go to the [Releases](https://github.com/simonlang01/klen/releases/latest) page
 2. Download the `.dmg` file
-3. Open the DMG and drag **Plink** into your **Applications** folder
-4. Launch Plink from Applications or Spotlight
+3. Open the DMG and drag **Klen** into your **Applications** folder
+4. Launch Klen from Applications or Spotlight
 
 **Requirements:** macOS 14 or later
 
@@ -19,7 +21,7 @@ A minimalist, ultra-fast macOS ToDo app focused on quick capture via a global ke
 
 ## Features
 
-- Global shortcut to instantly capture tasks (default: `N + Space`)
+- Global shortcut to instantly capture tasks (default: `⌥Space`)
 - Dashboard with open, overdue, and future tasks
 - Task groups, priorities, and due dates
 - Smart Input — natural language date parsing (e.g. "dentist tomorrow")
