@@ -7,17 +7,17 @@
         <language>en</language>
 
         <item>
-            <title>Klen 2.3.1</title>
-            <pubDate>Sun, 05 Apr 2026 21:28:40 +0000</pubDate>
-            <sparkle:version>15</sparkle:version>
-            <sparkle:shortVersionString>2.3.1</sparkle:shortVersionString>
+            <title>Klen 3.0</title>
+            <pubDate>Sun, 05 Apr 2026 23:56:49 +0000</pubDate>
+            <sparkle:version>16</sparkle:version>
+            <sparkle:shortVersionString>3.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <sparkle:releaseNotes>Bug fixes and stability improvements.</sparkle:releaseNotes>
+            <sparkle:releaseNotesLink>https://raw.githubusercontent.com/simonlang01/klen/main/CHANGELOG.html</sparkle:releaseNotesLink>
             <enclosure
-                url="https://github.com/simonlang01/klen/releases/download/v2.3.1/Klen-2.3.1.dmg"
-                length="3552266"
+                url="https://github.com/simonlang01/klen/releases/download/v3.0/Klen-3.0.dmg"
+                length="3587176"
                 type="application/octet-stream"
-                sparkle:edSignature="YCDnzjpAQ+IuEXD4Skj1pigYDruugcfliBAlnDSKJvimRkhFrsdhkmcPjPWb6DoL3ru5poMJPrd9PhuftZi/Dg=="
+                sparkle:edSignature="2TsZn41w6gO5ZzpIJjvHVFiWSLTyMUQYAEku3x/s3VQNjJ4/kTfOZmpyuk2gIrutgc9FN0eUsJ513mnuMr8+DA=="
             />
         </item>
 

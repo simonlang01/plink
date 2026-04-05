@@ -18,7 +18,7 @@ echo "→ Updating version to $VERSION (build $BUILD)..."
 
 echo "→ Building Release..."
 DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcodebuild \
-  -project "$REPO_ROOT/Plink.xcodeproj" \
+  -project "$REPO_ROOT/Klen.xcodeproj" \
   -scheme Klen -configuration Release \
   -derivedDataPath "$DERIVED_DATA" \
   -clonedSourcePackagesDirPath "$REPO_ROOT/build/SourcePackages" \
