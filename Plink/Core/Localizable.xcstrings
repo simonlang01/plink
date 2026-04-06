@@ -862,6 +862,9 @@
         }
       }
     },
+    "Get started with Klen" : {
+
+    },
     "group.allTasks" : {
       "localizations" : {
         "de" : {
@@ -4309,6 +4312,9 @@
         }
       }
     },
+    "Plink is now Klen." : {
+
+    },
     "priority.high" : {
       "localizations" : {
         "de" : {
@@ -5494,6 +5500,57 @@
         }
       }
     },
+    "settings.onboarding.button" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einführung zurücksetzen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset Onboarding"
+          }
+        }
+      }
+    },
+    "settings.onboarding.desc" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einführung erneut anzeigen beim nächsten App-Start."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show the onboarding again on next launch."
+          }
+        }
+      }
+    },
+    "settings.onboarding.title" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einführung"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onboarding"
+          }
+        }
+      }
+    },
     "settings.reset.button" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -5609,27 +5666,6 @@
             "value" : "%d tasks · %d groups"
           }
         }
-      }
-    },
-    "settings.onboarding.title" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Einführung" } },
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Onboarding" } }
-      }
-    },
-    "settings.onboarding.desc" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Einführung erneut anzeigen beim nächsten App-Start." } },
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Show the onboarding again on next launch." } }
-      }
-    },
-    "settings.onboarding.button" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Einführung zurücksetzen" } },
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Reset Onboarding" } }
       }
     },
     "settings.reset.title" : {
